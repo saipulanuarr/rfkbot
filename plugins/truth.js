@@ -1,7 +1,9 @@
 let handler  = async (m, { conn }) => {
   conn.reply(m.chat,`“${pickRandom(global.truth)}”`, m)
 }
-command = /^(truth)$/i
+handler.help = ['truth', 'dare']
+handler.tags = ['fun']
+handler.command = /^(truth)$/i
 
 module.exports = handler
 
