@@ -44,7 +44,7 @@ handler.mods = false
 handler.premium = true
 handler.group = false
 handler.private = false
-handler.disable = true // klo pake wa mod ubah aja ke false
+handler.disable = false // klo pake wa mod ubah aja ke false
 
 handler.admin = false
 handler.botAdmin = false
