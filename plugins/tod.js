@@ -6,7 +6,7 @@ let handler = async (m, { conn, command }) => {
 }
 handler.help = ['tod']
 handler.tags = ['fun']
-handler.command = /^(tod|truth|dare)$/i
+handler.command = /^(tod)$/i
 
 module.exports = handler
 
