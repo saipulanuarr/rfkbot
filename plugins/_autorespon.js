@@ -32,7 +32,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠➥ *1 Bulan* :      *Rp 10000*
 ╠➥ *Permanen* : *Rp 15000*
 ╠➥ *Premium* :   *Rp 15000*
-╠➥ *Sc Bot* :        *Masih Beta*
+╠➥ *Sc Bot* :        *https://www.youtube.com/watch?v=d7dcw2CO4ew*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Gopay, Dana, Dan Pulsa
@@ -40,7 +40,7 @@ handler.all = async function (m, { isBlocked }) {
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
-╠═ ©2021 Rpg wabot-aq
+╠═ ©2022 King Of Bear
 ╠═ Scrip original by Nurutomo
 ╠═〘 ${namabot} 〙 ═`.trim(), footer, 'Dana', '#viadana', 'GoPay', '#viagopay', m)
 }
