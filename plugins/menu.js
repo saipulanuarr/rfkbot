@@ -25,8 +25,8 @@ const defaultMenu = {
 ┃
 ┃⬡ Uptime: *%uptime (%muptime)*
 ┃⬡ Database: %rtotalreg dari %totalreg
-┃⬡ Github:
-┃⬡ https://github.com/AlyaaXd/rfkbot
+┃⬡ Youtube:
+┃⬡ https://www.youtube.com/watch?v=d7dcw2CO4ew
 ┃
 ┗━━━━━━⬣`.trimStart(),
   header: '┏━━〔 %category 〕━⬣',
@@ -240,11 +240,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┃⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 ┃⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┃
-┃⬡ Script by Alyaa
-┃⬡ Github Name : AlyaaXd
-┃⬡ Yt : AlyaaXd
+┃⬡ Script by King Of Bear
+┃⬡ Github Name : Kepo
+┃⬡ Yt : https://www.youtube.com/watch?v=d7dcw2CO4ew
 ┃⬡ Run bot : Heroku
-┃⬡ Tipe SC rfkbot
+┃⬡ Tipe SC King Of Bear
 ┗━━━━━━━━⬣`.trim(),
           "buttonText": "Klik Disini",
           "listType": "SINGLE_SELECT",
