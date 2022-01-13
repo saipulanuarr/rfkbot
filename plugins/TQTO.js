@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['ɴᴜʀᴜᴛᴏᴍᴏ','ʀᴇɴᴅʏᴄʀᴀғᴛ','ɪʙɴᴜ ɴʀ','ʙᴀᴋᴀ ʙᴏᴛᴢ','ʙᴀᴋᴀ ᴛᴇᴀᴍ','ᴋɪɴɢ ᴏғ ʙᴇᴀʀ']
 handler.tags = ['thnks']
 handler.customPrefix = /(\?$)/
-handler.command = /^kingofbear$/i
+handler.command = /^bearganteng$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true
