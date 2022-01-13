@@ -9,16 +9,16 @@ let [number, pesan] = text.split `|`
 
     let korban = `${number}`
     var nomor = m.sender
-    let spam1 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam2 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam3 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam4 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam5 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam6 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam7 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam8 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam9 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
-    let spam10 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~BAKA BOTZ`
+    let spam1 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam2 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam3 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam4 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam5 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam6 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam7 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam8 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam9 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
+    let spam10 = `*「 WA SPAMMER 」*\n\nDari : wa.me/${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}\n\n~KING OF BEAR BOTZ`
 
     conn.sendMessage(korban + '@s.whatsapp.net', spam1, MessageType.text)
     conn.sendMessage(korban + '@s.whatsapp.net', spam2, MessageType.text)
@@ -42,7 +42,7 @@ handler.mods = true
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.disable = true // klo pake wa mod ganti aja ke false
+handler.disable = false // klo pake wa mod ganti aja ke false
 
 handler.admin = false
 handler.botAdmin = false
