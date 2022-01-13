@@ -12,7 +12,7 @@ let handler = async function(m, { conn , args, text, isAdmin, isBotAdmin, groupM
     await conn.reply(m.chat, `
 *[ CHAT ANTI VIRTEX ]*
 _Terdeteksi *@${asu.split("@")[0]}* telah mengirim virtex!_
-Maaf Kamu akan dikick oleh *MIKE BOT*
+Maaf Kamu akan dikick oleh *YUKI BOT*
 `.trim(), m, { 
       contextInfo: {  
         mentionedJid: [asu]
