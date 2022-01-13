@@ -13,7 +13,7 @@ let handler = async (m, { conn, command }) => {
 
   }
   if (/^dare$/i.test(command)) {
-    let res = await fetch(global.API('pencarikode', '/api/dareid', {}, 'apikey'))
+    let res = await fetch(https://raw.githubusercontent.com/saipulanuar/Truth-Or-Dare/main/dare.js)
     if (!res.ok) throw eror
     let json = await res.json()
     if (json.message == "") throw json
