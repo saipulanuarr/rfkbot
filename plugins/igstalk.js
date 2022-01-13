@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `contoh:\n${usedPrefix + command} stikerinbot`
+  if (!args[0]) throw `contoh:\n${usedPrefix + command} drak_ipul123`
 
   let res = await fetch(global.API('zekais', '/igs', { username: args[0] }))
   if (!res.ok) throw eror
