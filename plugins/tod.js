@@ -4,7 +4,7 @@ let handler = async (m, { conn, command }) => {
     conn.send3Button(m.chat, 'Truth or Dare', footer, 'Truth', '#truth', 'Dare', '#dare', 'RANDOM', `${pickRandom(['#dare', '#truth'])}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
   }
   if (/^truth$/i.test(command)) {
-    let res = await fetch(global.API('pencarikode', '/api/truthid', {}, 'apikey'))
+    let res = await fetch('https://raw.githubusercontent.com/saipulanuar/Truth-Or-Dare/main/truth.js')
     if (!res.ok) throw eror
     let json = await res.json()
     if (json.message == "") throw json
@@ -13,7 +13,7 @@ let handler = async (m, { conn, command }) => {
 
   }
   if (/^dare$/i.test(command)) {
-    let res = await fetch(https://raw.githubusercontent.com/saipulanuar/Truth-Or-Dare/main/dare.js)
+    let res = await fetch('https://raw.githubusercontent.com/saipulanuar/Truth-Or-Dare/main/dare.js')
     if (!res.ok) throw eror
     let json = await res.json()
     if (json.message == "") throw json
