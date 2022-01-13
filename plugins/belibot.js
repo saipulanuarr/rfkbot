@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *1 Bulan* :      *Rp 20.000,00*
 ╠➥ *Permanen* : *Rp 30.000,00*
 ╠➥ *Premium* :   *Rp 15.000,00*
-╠➥ *Sc Bot* :        *Masih Beta*
+╠➥ *Sc Bot* :        *https://www.youtube.com/watch?v=d7dcw2CO4ew*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Gopay, Dana, Dan Pulsa
@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
-╠═ ©2021 Rpg wabot-aq
+╠═ ©2022 King Of Bear
 ╠═ Scrip original by Nurutomo
 ╠═〘 ${namabot} 〙 ═`.trim(), footer, 'Dana', '#viadana', 'OVO', '#viaovo', 'Pulsa', '#viapulsa', m)
 }
