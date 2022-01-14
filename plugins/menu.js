@@ -4,13 +4,18 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
+let d = new Date
+let locale = 'id'
+let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
+let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
- quotesnya = await fetchJson(`https://apikey-bear2.herokuapp.com/api/randomquote?apikey=KingOfBear`)
-quotes = quotesnya.result.quotes
-by = quotesnya.result.author
 ┏━━〔 ${namabot} 〕━⬣
 ┃⬡ Hai, %name!
 ┃
@@ -24,18 +29,12 @@ by = quotesnya.result.author
 ┃⬡ Tanggal : *%date*
 ┃⬡ Tanggal Islam : 
 ┃⬡ *%dateIslamic*
-┃⬡ Waktu: *%time*
+┃⬡ Waktu: *%time WIB*
 ┃
 ┃⬡ Uptime: *%uptime (%muptime)*
 ┃⬡ Database: %rtotalreg dari %totalreg
 ┃⬡ Youtube:
 ┃⬡ https://youtu.be/d7dcw2CO4ew
-┃
-┃ 𝘘𝘜𝘖𝘛𝘌𝘚  : 
-┃ _${quotes}_
-┃
-┃ 𝘘𝘜𝘖𝘛𝘌𝘚 _BY_ :
-┃ _${by}_
 ┗━━━━━━⬣`.trimStart(),
   header: '┏━━〔 %category 〕━⬣',
   body: '┃⬡%cmd %islimit %isPremium',
@@ -490,7 +489,7 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
+  const time = (new Date().getUTCHours() + 7) % 24
   res = "Selamat dinihari"
   if (time >= 4) {
     res = "Selamat pagi"
