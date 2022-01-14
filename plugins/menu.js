@@ -21,7 +21,7 @@ const defaultMenu = {
 ┃⬡ Tanggal : *%date*
 ┃⬡ Tanggal Islam : 
 ┃⬡ *%dateIslamic*
-┃⬡ Waktu: *%time WIB*
+┃⬡ Waktu: *%time*
 ┃
 ┃⬡ Uptime: *%uptime (%muptime)*
 ┃⬡ Database: %rtotalreg dari %totalreg
@@ -179,7 +179,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let pushname = `${names.vnmae || names.notify || names.names || ('+' + names.jid.split`@`[0])}`
     let pushn = 'Daftar Dulu ya kak supaya namanya muncul disini'
     let name = registered ? global.db.data.users[m.sender].name : pushn
-    let d = new Date
+    let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
@@ -481,7 +481,7 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = (new Date().getUTCHours() + 7) % 24
+  const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
     res = "Selamat pagi"
