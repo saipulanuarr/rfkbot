@@ -40,6 +40,7 @@ global.APIKeys = { // APIKey Here
   'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
   'https://apikey-bear.herokuapp.com': 'KingOfBear',
+  'https://apikey-bear2.herokuapp.com': 'KingOfBear',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
