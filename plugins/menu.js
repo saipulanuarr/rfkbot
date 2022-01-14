@@ -4,14 +4,6 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
-let d = new Date
-let locale = 'id'
-let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
-let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    })
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
@@ -187,7 +179,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let pushname = `${names.vnmae || names.notify || names.names || ('+' + names.jid.split`@`[0])}`
     let pushn = 'Daftar Dulu ya kak supaya namanya muncul disini'
     let name = registered ? global.db.data.users[m.sender].name : pushn
-    let d = new Date(new Date + 3600000)
+    let d = new Date
     let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
