@@ -33,7 +33,7 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey' (apikey kalian)
-  'https://api.xteam.xyz': 'Dawnfrostkey',
+  'https://api.xteam.xyz': 'KingOfBear',
   'https://api.lolhuman.xyz': 'RFK-Rey',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'apivinz',
@@ -43,7 +43,7 @@ global.APIKeys = { // APIKey Here
 
 lolkey = 'RFK-Rey'
 zekskey = 'apivinz'
-xteamkey = 'Dawnfrostkey'
+xteamkey = 'KingOfBear'
 //xteam        MIMINETBOT
 namaig = 'https://instagram.com/drak_ipul123'
 namagithub = 'GAK ADA :)'
