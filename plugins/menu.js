@@ -6,6 +6,9 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
+quotesnya = await fetchJson(`https://apikey-bear2.herokuapp.com/api/randomquote?apikey=KingOfBear`)
+quotes = quotesnya.result.quotes
+by = quotesnya.result.author
 const defaultMenu = {
   before: `
 ┏━━〔 ${namabot} 〕━⬣
@@ -28,6 +31,11 @@ const defaultMenu = {
 ┃⬡ Youtube:
 ┃⬡ https://youtu.be/d7dcw2CO4ew
 ┃
+┃ 𝘘𝘜𝘖𝘛𝘌𝘚  : 
+┃ _${quotes}_
+┃
+┃ 𝘘𝘜𝘖𝘛𝘌𝘚 _BY_ :
+┃ _${by}_
 ┗━━━━━━⬣`.trimStart(),
   header: '┏━━〔 %category 〕━⬣',
   body: '┃⬡%cmd %islimit %isPremium',
