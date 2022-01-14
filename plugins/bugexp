@@ -8,10 +8,7 @@ global.db.data.users[m.sender].exp += hasil * 1 // Number(hasil)
 handler.help = ['bugexp']
 handler.tags = ['owner']
 handler.command = /^(bugexp)$/i
+
 handler.owner = true
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
 module.exports = handler
