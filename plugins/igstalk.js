@@ -1,11 +1,12 @@
 const fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `contoh:\n${usedPrefix + command} drak_ipul123`
+const pencarian = args[0]
+  if (!pencarian) throw `contoh:\n${usedPrefix + command} drak_ipul123`
 
-  let res = await fetch('https://viko-api.herokuapp.com/api/stalk/ig?apikey=vinko&query=${ username: args[0] }')
+  let res = await fetch('https://viko-api.herokuapp.com/api/stalk/ig?apikey=vinko&query=${pencarian}')
   if (!res.ok) throw eror
   let json = await res.json()
-  if (json.result) throw json
+  if (json.status != 200) throw json
   conn.sendMessage(m.chat, `Nama: ${json.result.Name}\n*Bio:* ${json.result.Biodata}\n*Followers:* ${json.result.Jumlah_Followers}\n*Following:* ${json.result.Jumlah_Following}\n*Posts:* ${json.result.Jumlah_Post}`, m, 0)
 }
 handler.help = ['igstalk <username>']
