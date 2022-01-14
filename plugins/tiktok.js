@@ -6,7 +6,7 @@ let res = await fetch(`https://apikey-bear.herokuapp.com/docs/download/tiktok?ur
 if (!res.ok) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
-let { description, author, statistic, link } = json.result
+let { description, author, statistic, link } = json.nowm
 await conn.sendFile(m.chat, link, 'tt.mp4', `
 ▶ ${statistic.playCount} Views
 ❤ ${statistic.diggCount} Likes
