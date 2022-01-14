@@ -1,9 +1,8 @@
 const fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-const pencarian = args[0]
-  if (!pencarian) throw `contoh:\n${usedPrefix + command} drak_ipul123`
+if (!args[0]) throw `contoh:\n${usedPrefix + command} stikerinbot`
 
-  let res = await fetch('https://viko-api.herokuapp.com/api/stalk/ig?apikey=vinko&query=${pencarian}')
+  let res = await fetch(global.API('vinco', '/api/stalk/ig', { username: args[0] }))
   if (!res.ok) throw eror
   let json = await res.json()
   if (json.status != 200) throw json
