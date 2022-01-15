@@ -14,7 +14,7 @@ let handler = async (m, { conn, args }) => {
   *Following:* ${json.result.Jumlah_Following}
   *Posts:* ${json.result.Jumlah_Post}
   *Private:* ${json.result.private ? 'Ya' : 'Tidak'}
-  http://instagram.com/${json.result.Username}, m, 0, { thumbnail: await (await fetch(json.result.Profile_pic)).buffer() })
+  http://instagram.com/${json.result.Username}
 `.trim()
   else m.reply(caption)
 }
