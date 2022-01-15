@@ -28,7 +28,7 @@ let handler = async (m, { conn, args }) => {
   *Following:* ${json.result.Jumlah_Following}
   *Posts:* ${json.result.Jumlah_Post}
 `.trim()
-  if (pp) conn.sendFile(m.chat, pp, 'ppig.jpg', caption, m)
+   conn.sendFile(m.chat, json.result.Profile_pic, m, 0, { thumbnail: await (await fetch(json.result.Profile_pic)).buffer() })
   else m.reply(caption)
 }
 handler.help = ['igstalk <username>']
