@@ -2,14 +2,15 @@ const fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) throw `contoh:\n${usedPrefix + command} drak_ipul123`
 
-  let res = await fetch(`https://api.xteam.xyz/dl/igstalk?nama=${args[0]}&APIKEY=KingOfBear`)
+  let res = await fetch(global.API('xteam', '/dl/igstalk', {
+    nama: args[0]
+  }, 'xteamkey'))
   if (!res.ok) throw eror
   let json = await res.json()
   if (json.status != 200) throw json
-  if (json.result.error) throw json.result.message
-  conn.sendFile(m.chat, json.result.Profile_pic, 'eror.jpg', `*Nama:* ${json.result.Name}\n*Bio:* ${json.result.Biodata}\n*Followers:* ${json.result.Jumlah_Followers}\n*Following:* ${json.result.Jumlah_Following}\n*Posts:* ${json.result.Jumlah_Post}\n*Private:* ${json.result.private ? 'Ya' : 'Tidak'}\n\nhttp://instagram.com/drak_ipul123`, m, 0, { thumbnail: await (await fetch(json.result.Profile_pic)).buffer() })
+  conn.sendFile(m.chat, json.data.profilehd, 'eror.jpg', `*Nama:* ${json.data.fullname}\n*Bio:* ${json.data.bio}\n*Followers:* ${json.data.follower}\n*Following:* ${json.data.following}\n*Posts:* ${json.data.timeline}\n*Private:* ${json.data.private ? 'Ya' : 'Tidak'}\n\nhttp://instagram.com/stikerinbot`, m, 0, { thumbnail: await (await fetch(json.data.profilehd)).buffer() })
 }
-handler.help = ['igstalk <username> (Dalam Perbaikan)']
+handler.help = ['igstalk <username>']
 handler.tags = ['tools']
 handler.command = /^(igstalk)$/i
 handler.limit = true
