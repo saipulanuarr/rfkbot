@@ -20,7 +20,7 @@ let handler = async (m, { conn, args }) => {
     hd_profile_pic_url_info,
     is_private
   } = json.result
-  let pp = hd_profile_pic_url_info.url || Profile_pic
+  let pp = Profile_pic.url || Profile_pic
   let caption = `
   *Nama:* ${json.result.Name}
   *Bio:* ${json.result.Biodata}
