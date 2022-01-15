@@ -19,11 +19,11 @@ let handler = async (m, { conn, args }) => {
     Profile_pic,
     hd_profile_pic_url_info,
     is_private
-  } = json.result
+  } = json.result.url
   let pp = hd_profile_pic_url_info.url || profile_pic_url
   let caption = `
 ${Name} *(@${Username})* ${is_verified ? '✓' : ''}
-https://instagram.com/${username}
+https://instagram.com/${Username}
 ${is_private ? 'Post Hidden by User' : ('*' + media_count + '* Post(s)')}
 Following *${Jumlah_Following}* User(s)
 *${Jumlah_Followers}* Followers
