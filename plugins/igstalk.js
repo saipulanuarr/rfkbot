@@ -19,7 +19,7 @@ let handler = async (m, { conn, args }) => {
     Profile_pic,
     hd_profile_pic_url_info,
     is_private
-  } = json.result.user
+  } = json.result
   let pp = hd_profile_pic_url_info.url || profile_pic_url
   let caption = `
 ${Name} *(@${Username})* ${is_verified ? '✓' : ''}
