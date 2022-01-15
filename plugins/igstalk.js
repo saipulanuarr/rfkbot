@@ -1,8 +1,8 @@
-let fetch = require('node-fetch')
+const fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 if (!args[0]) throw `contoh:\n${usedPrefix + command} stikerinbot`
 
-  let res = await fetch(`https://viko-api.herokuapp.com/api/stalk/ig?apikey=vinko&query=${args[0]}`)
+  let res = await fetch(`https://apikey-bear3.herokuapp.com/api/stalk/ig?apikey=vinko&query=${args[0]}`)
   if (!res.ok) throw eror
   let json = await res.json()
   if (json.status) throw json
