@@ -18,7 +18,6 @@ let handler = async (m, { conn, args }) => {
     Profile_pic,
     is_private
   } = json.result
-  let pp = Profile_pic.url || Profile_pic
   let caption = `
 ${Name} *(@${Username})* ${is_verified ? '✓' : ''}
 https://instagram.com/${Username}
@@ -28,7 +27,6 @@ Following *${Jumlah_Following}* User(s)
 *Bio:*
 ${Biodata}
 `.trim()
-  if (pp) conn.sendFile(m.chat, pp, 'ppig.jpg', caption, m)
   else m.reply(caption)
 }
 handler.help = ['igstalk <username>']
