@@ -4,7 +4,7 @@ let handler = async (m, { conn, args }) => {
   let res = await fetch(`https://hardianto.xyz/api/download/instadl?url=${args[0]}?utm_source=ig_web_copy_link&apikey=hardianto`)
   let json = await res.json()
   if (res.status != 200) throw json
-  if (json.user) throw json.result.message
+  if (json.user) throw json.user
   let {
     fullName,
     username,
