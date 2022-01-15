@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
   let res = await fetch(global.API('xteam', '/dl/igstalk', {
     nama: args[0]
-  }, 'xteamkey'))
+  }, 'APIKEY'))
   if (!res.ok) throw eror
   let json = await res.json()
   if (json.status != 200) throw json
