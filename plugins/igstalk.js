@@ -8,7 +8,7 @@ let handler = async (m, { conn, args }) => {
   if (res.status != 200) throw json
   if (json.result.error) throw json.result.message
   let caption = `
-`*Nama:* ${json.result.Name}
+  *Nama:* ${json.result.Name}
   *Bio:* ${json.result.Biodata}
   *Followers:* ${json.result.Jumlah_Followers}
   *Following:* ${json.result.Jumlah_Following}
