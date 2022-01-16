@@ -1,8 +1,10 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn, usedPrefix, command }) => {
-    let url = await fetch(`https://hardianto.xyz/api/anime/loli?apikey=hardianto`)
-    await conn.sendButtonImg(m.chat, url,  footer, 'Next', `${usedPrefix + command}`, m, 0, { thumbnail: await (await fetch(url)).buffer() })
-    // await conn.sendFile(m.chat, url, '', '', m, 0, { thumbnail: await (await fetch(url)).buffer() })
+     let handler  = async (m, { conn, usedPrefix, command }) => {
+m.reply(wait)
+heum = await fetch(`https://apikey-bear3.herokuapp.com/api/darkjokes?apikey=KingOfBear`)
+    json = await heum.buffer()
+   conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
+
 }
 handler.help = ['darkjoke']
 handler.tags = ['internet']
