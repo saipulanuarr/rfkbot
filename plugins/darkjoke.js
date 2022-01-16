@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, usedPrefix, command }) => {
-    let url = global.API('xteam', '/asupan/darkjoke', {}, 'APIKEY')
+    let url = await fetch(`https://hardianto.xyz/api/anime/loli?apikey=hardianto`)
     await conn.sendButtonImg(m.chat, url,  footer, 'Next', `${usedPrefix + command}`, m, 0, { thumbnail: await (await fetch(url)).buffer() })
     // await conn.sendFile(m.chat, url, '', '', m, 0, { thumbnail: await (await fetch(url)).buffer() })
 }
