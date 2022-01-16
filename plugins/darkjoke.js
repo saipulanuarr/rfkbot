@@ -2,8 +2,8 @@ let fetch = require('node-fetch')
      let handler  = async (m, { conn, usedPrefix, command }) => {
 m.reply(wait)
 heum = await fetch(`https://apikey-bear3.herokuapp.com/api/darkjokes?apikey=KingOfBear`)
-    json = await heum.result.buffer()
-   conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
+    json = await heum.buffer()
+   conn.sendButtonImg(m.chat, json.result, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
 
 }
 handler.help = ['darkjoke']
