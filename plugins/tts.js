@@ -21,7 +21,6 @@ let handler = async (m, { conn, args }) => {
     res = await tts(text)
   } finally {
 await conn.sendFile(m.chat, res, 'tts.opus', null, m, true, { contextInfo: { forwardingScore: 999, isForwarded: true }})
-await conn.sendFile(m.chat, res, 'tts.opus', null, m, false, { contextInfo: { forwardingScore: 999, isForwarded: true }})
 
   }
 }
