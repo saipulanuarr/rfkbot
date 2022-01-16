@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
   let json = await res.json()
   if (!json.result) throw 'Err!'
   let thumbnail = await (await fetch(json.result)).buffer()
-  conn.sendFile(m.chat, json.result, 'dakjoke.png', json.caption, m, 0, { thumbnail })
+  conn.sendButtonImg(m.chat, json.result, kasihcaption, footer, 'NEXT', `${usedPrefix + command}`, m)
 }
 handler.help = ['darkjoke']
 handler.tags = ['internet']
