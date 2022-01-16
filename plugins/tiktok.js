@@ -6,7 +6,7 @@ let res = await fetch(`https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=
 if (!res.ok) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
-let { description, author, statistic, link } = json.nowm
+let { description, author, statistic, link } = json.result
 await conn.sendFile(m.chat, link, 'tt.mp4', `
 ▶ ${statistic.playCount} Views
 ❤ ${statistic.diggCount} Likes
