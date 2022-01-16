@@ -1,10 +1,12 @@
-let fetch = require('node-fetch')
-     let handler  = async (m, { conn, usedPrefix, command }) => {
-m.reply(wait)
-heum = await fetch(`https://apikey-bear3.herokuapp.com/api/darkjokes?apikey=KingOfBear`)
-    json = await heum.buffer()
-   conn.sendButtonImg(m.chat, json.result, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
-
+let fetch = require("node-fetch")
+let handler = async (m, { conn }) => {
+  m.reply(wait)
+  let res = await fetch(`https://apikey-bear3.herokuapp.com/api/darkjokes?apikey=KingOfBear`)
+  if (!res.ok) throw eror
+  let json = await res.json()
+  if (!json.result) throw 'Err!'
+  let thumbnail = await (await fetch(json.result)).buffer()
+  conn.sendFile(m.chat, json.result, 'dakjoke.png', json.caption, m, 0, { thumbnail })
 }
 handler.help = ['darkjoke']
 handler.tags = ['internet']
