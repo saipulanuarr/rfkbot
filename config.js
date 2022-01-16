@@ -37,7 +37,7 @@ global.APIs = { // API Prefix
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey' (apikey kalian)
   'https://api.xteam.xyz': 'KingOfBear',
-  'https://api.lolhuman.xyz': 'RFK-Rey',
+  'https://api.lolhuman.xyz': 'rey2k21',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
@@ -47,7 +47,7 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
-lolkey = 'RFK-Rey'
+lolkey = 'rey2k21'
 zekskey = 'apivinz'
 xteamkey = 'KingOfBear'
 bearkey = 'KingOfBear'
