@@ -113,6 +113,6 @@ let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fet
 `.trim(), footer, 'Translate', '.translate')
 handler.help = ['codebahasa']
 handler.tags = ['tools']
-handler.command = /^(co|ko)debahasa$/i
+handler.command = /^(codebahasa|kodebahasa)$/i
 
 module.exports = handler
