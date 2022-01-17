@@ -1,14 +1,13 @@
-let util = require('util')
-let path = require('path')
-let { spawn } = require('child_process')
-
-// HartA tahta Xteam
-let handler  = async (m, { conn, text }) => {
-  let d = new Date
-  let tgl = d.toLocaleDateString('id-Id')
-  let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
- text,
-await conn.sendFile(m.chat, fetch(`https://api.xteam.xyz/tahta?text=${text,}&APIKEY=${xteamkey}`), 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *KING OF BEAR*', m)
+let fetch = require("node-fetch")
+let handler = async (m, { conn }) => {
+  if (!text) throw `Uhm...Teksnya mana?`
+  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
+  let res = await fetch(`https://api.xteam.xyz/tahta?text=${text}&APIKEY=${bearkey}`)
+  if (!res.ok) throw eror
+  let json = await res.json()
+  if (!json.result) throw 'Err!'
+  let thumbnail = await (await fetch(json.result)).buffer()
+  conn.sendFile(m.chat, json.result, 'harta2.png', json.caption, m, 0, { thumbnail })
 }
 handler.help = ['harta2'].map(v => v + ' <teks>')
 handler.tags = ['tools']
