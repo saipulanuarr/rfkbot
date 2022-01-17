@@ -4,7 +4,7 @@ const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
 if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command} <Kode Bahasa> <Text>\nContoh: ${usedPrefix + command} id How are you?
-`.trim(), footer, 'Kode Bahasa', '.codebahasa')
+`.trim()
 
     let lang = args[0]
     let text = args.slice(1).join(' ')
@@ -27,7 +27,7 @@ if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command}
         })
         throw eror
     } finally {
-        m.reply(result[0])
+        m.reply(result[0]), footer, 'Kode Bahasa', '.codebahasa')
     }
 
 }
