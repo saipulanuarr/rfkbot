@@ -3,7 +3,7 @@ const defaultLang = 'en'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
-if (!args[0]) throw `Uhm...Kode bahasanya mana?\n*Contoh: ${usedPrefix + command} <Kode Bahasa> <Text/Reply Pesan>*
+if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command} <Kode Bahasa> <Text/Reply Pesan>
 `.trim()
 
     let lang = args[0]
