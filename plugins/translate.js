@@ -3,13 +3,7 @@ const defaultLang = 'en'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
-    let err = `
-Contoh:
-${usedPrefix + command} <lang> [text]
-${usedPrefix + command} id your messages
-
-Daftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages
-`.trim()
+    let err = `Contoh:\n${usedPrefix + command} <lang> [text]\n${usedPrefix + command} id your messages\n\nDaftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages`.trim()
 
     let lang = args[0]
     let text = args.slice(1).join(' ')
