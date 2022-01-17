@@ -3,7 +3,7 @@ const defaultLang = 'en'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
-if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command} <Kode Bahasa> <Text>\nContoh: ${usedPrefix + command} id How are you?
+if (!args[0]) throw `Uhm...Kode bahasanya mana? Ketik: ${usedPrefix + commandd} Untuk melihat Kode Bahasa\nContoh: ${usedPrefix + command} <Kode Bahasa> <Text>\nContoh: ${usedPrefix + command} id How are you?
 `.trim()
 
     let lang = args[0]
@@ -27,13 +27,14 @@ if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command}
         })
         throw eror
     } finally {
-        m.reply(result[0]), footer, 'Kode Bahasa', '.codebahasa')
+        m.reply(result[0])
     }
 
 }
 handler.help = ['translate'].map(v => v + ' <lang> <teks>')
 handler.tags = ['tools']
 handler.command = /^(tr(anslate)?)$/i
+handler.commandd = /^(kodebahasa)$/i
 handler.limit = false
 handler.fail = null
 handler.exp = 0
