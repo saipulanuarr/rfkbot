@@ -1,13 +1,15 @@
-let fetch = require("node-fetch")
-let handler = async (m, { conn }) => {
-  if (!text) throw `Uhm...Teksnya mana?`
-  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-  let res = await fetch(`https://api.xteam.xyz/tahta?text=${text}&APIKEY=${bearkey}`)
+const fetch = require('node-fetch')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+  if (!args[0]) throw `contoh:\n${usedPrefix + command} bear`
+
+  let res = await fetch(global.API('xteam', '/tahta', {
+    nama: args[0]
+  }, 'APIKEY'))
   if (!res.ok) throw eror
   let json = await res.json()
   if (!json.result) throw 'Err!'
   let thumbnail = await (await fetch(json.result)).buffer()
-  conn.sendFile(m.chat, json.result, 'harta2.png', json.caption, m, 0, { thumbnail })
+await conn.sendFile(m.chat, json.result, 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *KING OF BEAR*', m)
 }
 handler.help = ['harta2'].map(v => v + ' <teks>')
 handler.tags = ['tools']
