@@ -3,11 +3,14 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 // HartA tahta Xteam
-let handler  = async (m, { text, usedPrefix, command }) => {
+let handler  = async (m, { conn, text, usedPrefix, command }) => {
   let d = new Date
   let tgl = d.toLocaleDateString('id-Id')
   let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
+conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
+ if (m.chat in conn.hartatahta) throw 'Masih ada yang sedang membuat\nTeks Harta Tahta\ndi chat ini... tunggu sampai selesai'
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
+ else conn.hartatahta[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
 await conn.sendFile(m.chat, global.API('xteam', '/tahta', { text, }, 'APIKEY'), 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
