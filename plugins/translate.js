@@ -3,8 +3,8 @@ const defaultLang = 'en'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
-if (!args[0]) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear
-`.trim()
+if (!args[0]) throw `Uhm...Kode bahasanya mana?\nContoh: ${usedPrefix + command} <Kode Bahasa> <Text>\nContoh: ${usedPrefix + command} id How are you?
+`.trim(), footer, 'Kode Bahasa', '.codebahasa')
 
     let lang = args[0]
     let text = args.slice(1).join(' ')
