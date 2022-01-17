@@ -3,7 +3,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 // HartA tahta Xteam
-let handler  = async (m, { conn, text, usedPrefix, command }) => {
+let handler  = async (m, { text, usedPrefix, command }) => {
   let d = new Date
   let tgl = d.toLocaleDateString('id-Id')
   let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
