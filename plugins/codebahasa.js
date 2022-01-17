@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), `
+let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, await (await fetch(fla + 'codebahasa')).buffer(), `
 ┌〔 𝙆𝙤𝙙𝙚 𝘽𝙖𝙝𝙖𝙨𝙖 〕
 ├ Afrikaans	af
 ├ Albanian	sq
