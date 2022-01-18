@@ -13,7 +13,7 @@ conn.logoepep = conn.logoepep ? conn.logoepep : {}
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
  else conn.logoepep[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-await conn.sendFile(m.chat, await fetch(global.API('xteam', '/api/epep', 'APIKEY', { text, })).buffer(), 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
+await conn.sendFile(m.chat, global.API('xteam', '/api/epep', 'APIKEY', { text, }), 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m, 0, { thumbnail: await (await fetch(global.API)).buffer() })
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
