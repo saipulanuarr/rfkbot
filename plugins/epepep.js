@@ -5,8 +5,7 @@ if (!text) throw `Uhm...Namanya mana?\nContoh: ${usedPrefix + command} King Of B
 m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
 heum = await fetch(`https://apikey-bear3.herokuapp.com/api/maker/epep?apikey=KingOfBear&text=${text}`)
     json = await heum.buffer()
-   conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
-
+   conn.sendFile(m.chat, json, 'Logo epep.png', 'Nih udah jadi Logo Epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['8bit']
 handler.tags = ['anime']
