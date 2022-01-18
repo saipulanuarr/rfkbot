@@ -12,7 +12,7 @@ conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
  else conn.hartatahta[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-await conn.sendFile(m.chat, await fetch(https://api.zeks.me/api/epep?apikey=HCea8n9SQlhEQsbVuBPTIEW3c8i&text=${text}), 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *King Of Bear*', m)
+await conn.sendFile(m.chat, global.API('xteam', '/tahta', { text, }, 'APIKEY'), 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['harta2'].map(v => v + ' <teks>')
 handler.tags = ['tools']
