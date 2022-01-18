@@ -6,7 +6,7 @@ let { spawn } = require('child_process')
 let handler  = async (m, { conn, text, usedPrefix, command }) => {
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-await conn.sendFile(m.chat, global.API('zeks', '/api/epep', HCea8n9SQlhEQsbVuBPTIEW3c8i, { text, }), 'Logo Epep.png', 'Nih udah jadi Logo Epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
+await conn.sendFile(m.chat, global.API('zeks', '/api/epep', 'APIKEY', { text, }), 'Logo Epep.png', 'Nih udah jadi Logo Epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
