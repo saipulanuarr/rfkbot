@@ -76,6 +76,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'quran': 'Islam',
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
+    'virus': 'Virus',
     'info': 'Info',
     '': 'Tanpa Kategori',
   }
@@ -158,6 +159,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'info') tags = {
     'info': 'Info'
+  }
+  if (teks == 'virus') tags = {
+    'virus': 'Virus'
   }
   if (teks == 'tanpakategori') tags = {
     '': 'Tanpa Kategori'
@@ -358,6 +362,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "title": "[ℹ️] Info",
                   "description": "Info Tentang Bot",
                   "rowId": ".? info"
+                }, {
+                  "title": "[🔧] Virus",
+                  "description": "Virus Yang Bisa membuat whatsapp orang ngelag/error",
+                  "rowId": ".? virus"
                 }, {
                   "title": "Tanpa Kategori",
                   "description": "",
