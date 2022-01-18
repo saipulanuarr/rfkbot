@@ -12,7 +12,7 @@ conn.logoepep = conn.logoepep ? conn.logoepep : {}
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
  else conn.logoepep[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-await conn.sendFile(m.chat,  global.API('zeks', '/api/epep', 'APIKEY', { text }), 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
+await conn.sendFile(m.chat,  global.API('zeks', '/api/epep?', 'APIKEY', { text }), 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
@@ -22,7 +22,7 @@ handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = true
-handler.private = false
+handler.private = true
 
 handler.admin = false
 handler.botAdmin = false
