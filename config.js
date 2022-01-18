@@ -31,6 +31,7 @@ global.APIs = { // API Prefix
   pencarikode: 'https://pencarikode.xyz',
   bear: 'https://apikey-bear.herokuapp.com',
   bear2: 'https://apikey-bear2.herokuapp.com',
+  bear3: 'https://apikey-bear3.herokuapp.com',
   vinco: 'https://viko-api.herokuapp.com',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
@@ -43,6 +44,7 @@ global.APIKeys = { // APIKey Here
   'https://pencarikode.xyz': 'pais',
   'https://apikey-bear.herokuapp.com': 'KingOfBear',
   'https://apikey-bear2.herokuapp.com': 'KingOfBear',
+  'https://apikey-bear3.herokuapp.com': 'KingOfBear',
   'https://viko-api.herokuapp.com': 'vinko',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
