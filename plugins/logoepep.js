@@ -9,11 +9,11 @@ let handler  = async (m, { conn, text, usedPrefix, command }) => {
   let tgl = d.toLocaleDateString('id-Id')
   let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
 conn.logoepep = conn.logoepep ? conn.logoepep : {}
- if (m.chat in conn.logoepep) throw 'Masih ada yang sedang membuat\nTeks Harta Tahta\ndi chat ini... tunggu sampai selesai'
+ if (m.chat in conn.logoepep) throw 'Masih ada yang sedang membuat\nLogo Epep\ndi chat ini... tunggu sampai selesai'
  if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
  else conn.logoepep[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-await conn.sendFile(m.chat, global.API('xteam', '/api/epep', 'APIKEY', { text, }), 'Logo Epep.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *King Of Bear*', m)
+await conn.sendFile(m.chat, global.API('xteam', '/api/epep', 'APIKEY', { text, }), 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
