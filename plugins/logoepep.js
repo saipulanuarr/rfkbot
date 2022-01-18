@@ -2,10 +2,12 @@ let fetch = require('node-fetch')
      let handler  = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) throw `Uhm...Teksnya mana?\nContoh: ${usedPrefix + command} Bear`
 m.reply(wait)
-heum = await fetch(`https://api.zeks.me/api/epep?apikey=HCea8n9SQlhEQsbVuBPTIEW3c8i&text=${text}`)
-    json = await heum.buffer()
-   conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
-
+  let res = await fetch(`https://api.zeks.me/api/epep?apikey=HCea8n9SQlhEQsbVuBPTIEW3c8i&text=${text}`)
+  if (!res.ok) throw eror
+  let json = await res.json()
+  if (!json.res) throw 'Err!'
+  let thumbnail = await (await fetch(json.res)).buffer()
+  conn.sendFile(m.chat, json.res, 'darkjoke.png', json.caption, m, 0, { thumbnail })
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
