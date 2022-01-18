@@ -19,7 +19,7 @@ if (!res.ok) throw eror
   let thumbnail = await (await fetch(json.result)).buffer()
   conn.sendFile(m.chat, json.result, 'Logo Epep.png', json.caption, m, 0, { thumbnail })
 }
-}
+
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
 handler.command = /^(logoepep)$/i
