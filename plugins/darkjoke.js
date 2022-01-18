@@ -1,7 +1,7 @@
 let fetch = require("node-fetch")
 let handler = async (m, { conn }) => {
   m.reply(wait)
-  let res = await fetch(`https://leyscoders-api.herokuapp.com/api/darkjoke?apikey=${leyskey}`)
+  let res = await fetch(`https://apikey-bear3.herokuapp.com/api/darkjokes?apikey=${bearkey}`)
   if (!res.ok) throw eror
   let json = await res.json()
   if (!json.result) throw 'Err!'
