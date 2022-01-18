@@ -50,6 +50,7 @@ global.APIKeys = { // APIKey Here
 lolkey = 'rey2k21'
 zekskey = 'apivinz'
 xteamkey = 'KingOfBear'
+leyskey = 'dappakntlll'
 bearkey = 'KingOfBear'
 vinkey = 'vinko'
 //xteam        MIMINETBOT
