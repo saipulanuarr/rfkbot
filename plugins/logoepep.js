@@ -13,7 +13,12 @@ conn.logoepep = conn.logoepep ? conn.logoepep : {}
  else conn.logoepep[m.chat] = true
  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
  let url = await fetch(`https://api.zeks.me/api/epep?apikey=HCea8n9SQlhEQsbVuBPTIEW3c8i&text=${text}`)
-await conn.sendFile(m.chat,  url, 'Logo Epep.png', 'Nih udah jadi Logo epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
+if (!res.ok) throw eror
+  let json = await res.json()
+  if (!json.result) throw 'Err!'
+  let thumbnail = await (await fetch(json.result)).buffer()
+  conn.sendFile(m.chat, json.result, 'Logo Epep.png', json.caption, m, 0, { thumbnail })
+}
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
