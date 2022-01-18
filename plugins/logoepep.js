@@ -5,9 +5,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   let res = await fetch(`https://api.zeks.me/api/epep?apikey=${zekskey}&text=${text}`)
   if (!res.ok) throw eror
   let json = await res.json()
-  if (!json.result) throw 'Err!'
-  let thumbnail = await (await fetch(json.result)).buffer()
-  conn.sendFile(m.chat, json.result, 'darkjoke.png', json.caption, m, 0, { thumbnail })
+  if (!json.res) throw 'Err!'
+  let thumbnail = await (await fetch(json.res)).buffer()
+  conn.sendFile(m.chat, json.res, 'logoepep.png', json.caption, m, 0, { thumbnail })
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
@@ -16,8 +16,8 @@ handler.limit = true
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = true
-handler.private = false
+handler.group = false
+handler.private = true
 
 handler.admin = false
 handler.botAdmin = false
