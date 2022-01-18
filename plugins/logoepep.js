@@ -5,8 +5,7 @@ let handler  = async (m, { conn, text, usedPrefix, command }) => {
 m.reply(wait)
 heum = await fetch(global.API('xteam', '/api/epep', 'APIKEY', { text, })
     json = await heum.buffer()
-   conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
-
+   conn.sendFile(m.chat, json, 'Harta Tahta.png', 'Nih udah jadi Harta tahtamu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
