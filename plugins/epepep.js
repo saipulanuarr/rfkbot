@@ -7,19 +7,20 @@ heum = await fetch(`https://apikey-bear3.herokuapp.com/api/maker/epep?apikey=Kin
     json = await heum.buffer()
    conn.sendFile(m.chat, json, 'Logo epep.png', 'Nih udah jadi Logo Epepmu...\n *_Tetap Support:_* *King Of Bear*', m)
 }
-handler.help = ['8bit']
-handler.tags = ['anime']
-handler.command = /^8bit$/i
+handler.help = ['logoepep'].map(v => v + ' <teks>')
+handler.tags = ['tools']
+handler.command = /^logo(epep|ff|efef)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.limit = true
-handler.group = false
+handler.group = true
 handler.private = false
 
 handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
+handler.register = true
 
 module.exports = handler
