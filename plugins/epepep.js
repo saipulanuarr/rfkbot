@@ -1,8 +1,9 @@
 
 let fetch = require('node-fetch')
-     let handler  = async (m, { conn, usedPrefix, command }) => {
+     let handler  = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) throw `Uhm...Namanya mana?\nContoh: ${usedPrefix + command} King Of Bear`
 m.reply(wait)
-heum = await fetch(`https://apikey-bear3.herokuapp.com/api/maker/epep?apikey=KingOfBear&text=KingOfBear`)
+heum = await fetch(`https://apikey-bear3.herokuapp.com/api/maker/epep?apikey=KingOfBear&text=${text}`)
     json = await heum.buffer()
    conn.sendButtonImg(m.chat, json, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
 
