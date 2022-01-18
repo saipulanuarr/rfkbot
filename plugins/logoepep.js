@@ -7,7 +7,7 @@ m.reply(wait)
   let json = await res.json()
   if (!json.res) throw 'Err!'
   let thumbnail = await (await fetch(json.res)).buffer()
-  conn.sendFile(m.chat, json.res, 'darkjoke.png', json.caption, m, 0, { thumbnail })
+  conn.sendFile(m.chat, json.res, 'darkjoke.png', m, 0, { thumbnail })
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
