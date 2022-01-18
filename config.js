@@ -39,7 +39,7 @@ global.APIKeys = { // APIKey Here
   'https://api.xteam.xyz': 'KingOfBear',
   'https://api.lolhuman.xyz': 'rey2k21',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.me': 'HCea8n9SQlhEQsbVuBPTIEW3c8i',
+  'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
   'https://apikey-bear.herokuapp.com': 'KingOfBear',
   'https://apikey-bear2.herokuapp.com': 'KingOfBear',
@@ -48,7 +48,7 @@ global.APIKeys = { // APIKey Here
 }
 
 lolkey = 'rey2k21'
-zekskey = 'HCea8n9SQlhEQsbVuBPTIEW3c8i'
+zekskey = 'apivinz'
 xteamkey = 'KingOfBear'
 bearkey = 'KingOfBear'
 vinkey = 'vinko'
