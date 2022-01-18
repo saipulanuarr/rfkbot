@@ -9,7 +9,7 @@ heum = await fetch(`https://apikey-bear3.herokuapp.com/api/maker/epep?apikey=Kin
 }
 handler.help = ['logoepep'].map(v => v + ' <teks>')
 handler.tags = ['tools']
-handler.command = /^logo(epep|ff|efef)$/i
+handler.command = /^logoepep$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
