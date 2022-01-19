@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) throw `contoh:\n${usedPrefix + command} raraharsita2`
-
+  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
   let res = await fetch(`https://api.lolhuman.xyz/api/stalktiktok/${args[0]}?apikey=${lolkey}`)
   if (!res.ok) throw eror
   let json = await res.json()
