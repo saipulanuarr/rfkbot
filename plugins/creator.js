@@ -1,3 +1,4 @@
+let fetch = require("node-fetch")
 const { MessageType } = require('@adiwajshing/baileys')
 const PhoneNumber = require('awesome-phonenumber')
 async function handler(m) {
@@ -627,6 +628,9 @@ END:VCARD
     }]
   }, MessageType.contactsArray, { quoted: m })
 m.reply('Ada Perlu apa kak nyari Owner??')
+let res = await fetch(`https://github.com/saipulanuar/Api-Github/raw/main/audio/ownerku.mp3`)
+json = await res.buffer()
+     await conn.sendFile(m.chat, json, 'error.mp3', null, m, true)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
