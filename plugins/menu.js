@@ -26,7 +26,7 @@ const defaultMenu = {
 ┃⬡ Uptime: *%uptime (%muptime)*
 ┃⬡ Database: %rtotalreg dari %totalreg
 ┃⬡ Youtube:
-┃⬡ https://youtu.be/jJrZYhM8fGQ
+┃⬡ https://youtu.be/gk7euEW1vis
 ┗━━━━━━⬣`.trimStart(),
   header: '┏━━〔 %category 〕━⬣',
   body: '┃⬡%cmd %islimit %isPremium',
@@ -244,8 +244,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┃⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┃
 ┃⬡ Script by King Of Bear
-┃⬡ Github Name : https://youtu.be/jJrZYhM8fGQ
-┃⬡ Yt : https://youtu.be/jJrZYhM8fGQ
+┃⬡ Github Name : https://youtu.be/gk7euEW1vis
+┃⬡ Yt : https://youtu.be/gk7euEW1vis
 ┃⬡ Run bot : Heroku
 ┃⬡ Tipe SC King Of Bear
 ┗━━━━━━━━⬣`.trim(),
