@@ -24,8 +24,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 
 
 ➥ ${namabot} Versi ${package.version}
-➥ *HomePage:* https://youtu.be/d7dcw2CO4ew
-➥ *Issue:* https://youtu.be/d7dcw2CO4ew
+➥ *Yt:* https://youtu.be/gk7euEW1vis
 ➥ *Ping:* ${neww - old} *ms*
 ➥ *Total user:* ${totalreg} *user*
 ➥ *Uptime:* ${uptime}
@@ -35,7 +34,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ➥ Dana: [0882-7926-8363]
 
 
-➥ Request? https://youtu.be/d7dcw2CO4ew
+➥ Request? https://youtu.be/gk7euEW1vis
 
 Official Grup :
 
