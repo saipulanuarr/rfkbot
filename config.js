@@ -17,7 +17,7 @@ gc2 = ''
 gc3 = ''
 global.linkGC = ['https://chat.whatsapp.com/HAZ6yFgCafUAeDbNH33IrL', ''] // ganti jadi group lu
 global.owner = ['6283128703968'] // Put your number here //owner eval
-global.kontak = ['6283128703968','0'] //Ketika ada yang ngetik #owner
+global.kontak = ['6283128703968','6288279268363'] //Ketika ada yang ngetik #owner
 global.mods = ['6288279268363'] // Want some help?
 global.prems = ['6283128703968'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -59,7 +59,7 @@ vinkey = 'vinko'
 namaig = 'https://instagram.com/drak_ipul123'
 namagithub = 'GAK ADA :)'
 kasihcaption = `Nih kak`
-namakontak1 = 'King Of Bear'
+namakontak1 = 'Riko Store31'
 namakontak2 = 'King Of Bear'
 
 //kasihcaption = `Nih Kak`
